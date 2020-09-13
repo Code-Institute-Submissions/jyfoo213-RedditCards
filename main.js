@@ -39,8 +39,8 @@ searchForm.addEventListener('submit', e => {
       </div>
       <div class="card-footer bg-white">
       <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br>
-        <span class="badge badge-pill badge-secondary">Upvotes: ${post.score}</span>
-        <span class="badge badge-pill badge-secondary">Comments: ${post.num_comments}</span>
+        <a class="badge badge-pill badge-secondary" href="${(post.url)}" target="_blank">Upvotes: ${post.score}</a>
+        <a class="badge badge-pill badge-secondary" href="${(post.url)}" target="_blank">Comments: ${post.num_comments}</a>
       </div>
     </div>
     </a>
