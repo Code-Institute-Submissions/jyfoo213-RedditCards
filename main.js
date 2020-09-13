@@ -14,7 +14,7 @@ searchForm.addEventListener('submit', e => {
   // Check for input
   if (searchTerm == '') {
     // Show message
-js edits    showMessage('Please key in search input', 'alert-danger');
+    showMessage('Please add a search term', 'alert-danger');
   }
   // Clear field
   searchInput.value = '';
