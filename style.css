@@ -3,6 +3,10 @@ h1{
   margin: auto;
 }
 
+body {
+  background-color: #f5f5f5;
+}
+
 /* .badge{
   margin: 1px;
 } */
