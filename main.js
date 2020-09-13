@@ -34,7 +34,7 @@ searchForm.addEventListener('submit', e => {
       <img class="card-img-top" src="${image}" alt="Reddit Card Image">
       <div class="card-body">
         <p class="card-text">${truncateString(post.selftext, 200)}
-        <a href="${(post.url)}" target="_blank">${truncateUrl(post.url)}</a>
+        <a href="${(post.url)}" target="_blank">${post.url}</a>
         <a href="https://reddit.com${post.permalink}" target="_blank"><b>View in Reddit</b></a>
       </div>
       <div class="card-footer bg-white">
@@ -79,10 +79,10 @@ function truncateString(myString, limit) {
 }
 
 // Truncate URL Function
-var truncateUrl = function(u) {
-  uend = u.slice(u.length - 15);
-  ustart = u.replace('http://', '').replace('https://', '').substr(0, 30);
-  var shorter = ustart + '...' + uend;
-  alert(shorter);
-  return shorter;
+// var truncateUrl = function(u) {
+//   uend = u.slice(u.length - 15);
+//   ustart = u.replace('http://', '').replace('https://', '').substr(0, 30);
+//   var shorter = ustart + '...' + uend;
+//   alert(shorter);
+//   return shorter;
 }
