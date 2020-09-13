@@ -34,7 +34,7 @@ searchForm.addEventListener('submit', e => {
       <a class="text-dark" href="https://reddit.com${post.permalink}" target="_blank">${truncateString(post.title, 200)}</a></h5>
       <img class="card-img-top" src="${image}" alt="Reddit Card Image">
       <div class="card-body">
-        <p class="card-text">${truncateString(post.selftext, 200)}<br>
+        <p class="card-text">${truncateString(post.selftext, 200)}
         <a href="${(post.url)}" target="_blank"><small>${shortUrl(post.url,32)}</small></a>
       </div>
       <div class="card-footer bg-white">
