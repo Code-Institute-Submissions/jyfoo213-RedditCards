@@ -33,10 +33,12 @@ searchForm.addEventListener('submit', e => {
       <h6 class="card-header bg-white">${truncateString(post.title, 200)}</h6>
       <img class="card-img-top" src="${image}" alt="Reddit Card Image">
       <div class="card-body">
-        <p class="card-text small">${truncateString(post.selftext, 200)}<a href="${post.url}" target="_blank"><b><u>[View in Reddit]</u></b></a>
+        <p class="card-text small">${truncateString(post.selftext, 200)}<a href="${post.url}" target="_blank"><b>[See More]</b></a>
       </div>
       <div class="card-footer bg-white">
-        <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br>
+      <span class="badge badge-primary"><a href="https://reddit.com${post.permalink}" target="_blank"><b>Visit Original Post</b></a></span>
+      <span class="badge badge-dark">Subreddit: ${post.subreddit}</span>
+        <br>
         <span class="badge badge-pill badge-secondary">Upvotes: ${post.score}</span>
         <span class="badge badge-pill badge-secondary">Comments: ${post.num_comments}</span>
       </div>
