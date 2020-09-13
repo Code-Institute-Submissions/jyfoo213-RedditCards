@@ -85,4 +85,4 @@ function truncateString(myString, limit) {
 //   var shorter = ustart + '...' + uend;
 //   alert(shorter);
 //   return shorter;
-}
+// }
