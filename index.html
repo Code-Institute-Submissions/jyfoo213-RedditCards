@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Reddit Cards</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-danger mb-3">
+    <div class="container">
+      <span class="navbar-brand"><h1>Reddit Cards</h1></span>
+    </div>
+  </nav>
+  <div id="search-container" class="container">
+    <div id="search" class="card card-body bg-light mb-2 ">
+      <h5>Search Reddit</h5>
+      <form id="search-form">
+        <div class="form-group">
+          <input type="text" id="search-input" class="form-control mb-3" placeholder="Search Input">
+        </div>
+        <!-- keywords -->
+        <div class="mb-2">
+          <h6>Or Explore Popular Subreddits</h6>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Trending</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Popular</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Memes</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Videos</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Gifs</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">News</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Food</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Travel</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Technology</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Sports</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Gaming</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">TV</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Health</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Fitness</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Politics</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Stocks</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Coding</button>
+        </div>
+        
+        <div class="form-check form-check-inline mb-1">
+          Sort By:
+          <input class="form-check-input ml-2" type="radio" name="sortby" value="relevance" checked>
+          <label class="form-check-label">
+            Relevance
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sortby" value="new">
+          <label class="form-check-label">
+            Latest
+          </label>
+        </div>
+        <h6 class="mt-2">Results Per Page</h6>
+        <div class="form-group">
+          <select name="limit" id="limit" class="form-control">
+            <option value="25">25</option>
+            <option value="50" selected>50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mt-4">Search</button>
+      </form>
+    </div>
+    <div id="results"></div>
+  </div>
+  <script src="./main.js" type="module"></script>
+</body>
+
+</html>
