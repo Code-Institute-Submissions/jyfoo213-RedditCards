@@ -31,15 +31,15 @@ searchForm.addEventListener('submit', e => {
       output += `
       <a href="${post.url}" target="_blank">
       <div class="card mb-1">
-      <h6 class="card-title">${truncateString(post.title, 180)}</h6>
+      <h6 class="card-header">${truncateString(post.title, 180)}</h6>
       <img class="card-img-top" src="${image}" alt="Reddit Card Image">
       <div class="card-body">
         <p class="card-text">${truncateString(post.selftext, 100)}</p>
-        <div>
-          <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br>
-          <span class="badge badge-pill badge-secondary">Upvotes: ${post.score}</span>
-          <span class="badge badge-pill badge-secondary">Comments: ${post.num_comments}</span>
-        </div>
+      </div>
+      <div class="card-footer">
+        <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br>
+        <span class="badge badge-pill badge-secondary">Upvotes: ${post.score}</span>
+        <span class="badge badge-pill badge-secondary">Comments: ${post.num_comments}</span>
       </div>
     </div>
     </a>
