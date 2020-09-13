@@ -89,3 +89,4 @@ function shortUrl(url, l){
   var start_chunk = shortString(url, chunk_l, false);
   var end_chunk = shortString(url, chunk_l, true);
   return start_chunk + ".." + end_chunk;
+}
