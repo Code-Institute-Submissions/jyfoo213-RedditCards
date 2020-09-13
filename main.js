@@ -35,8 +35,7 @@ searchForm.addEventListener('submit', e => {
       <img class="card-img-top" src="${image}" alt="Reddit Card Image">
       <div class="card-body">
         <p class="card-text">${truncateString(post.selftext, 200)}<br>
-        See more: <a href="${(post.url)}" target="_blank"><small>${shortUrl(post.url,40)}</small></a>
-        <br>Or 
+        See more: <a href="${(post.url)}" target="_blank">${shortUrl(post.url,40)}</a>
       </div>
       <div class="card-footer bg-white">
       <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br>
