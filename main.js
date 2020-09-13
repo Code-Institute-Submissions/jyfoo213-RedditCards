@@ -30,7 +30,7 @@ searchForm.addEventListener('submit', e => {
         : 'https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png';
       output += `
       <div class="card">
-      <h5 class="card-header bg-white">
+      <h5 class="card-header bg-white pt-2 pb-2">
       <a class="text-dark" href="https://reddit.com${post.permalink}" target="_blank">${truncateString(post.title, 200)}</a></h5>
       <img class="card-img-top" src="${image}" alt="Reddit Card Image">
       <div class="card-body pt-2 pb-2">
@@ -38,7 +38,7 @@ searchForm.addEventListener('submit', e => {
         <a href="${(post.url)}" target="_blank"><small>${shortUrl(post.url,32)}</small></a>
         </div>
       </div>
-      <div class="card-footer bg-white">
+      <div class="card-footer bg-white pt-2 pb-2">
       <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br>
         <a class="badge badge-pill badge-secondary" href="https://reddit.com${post.permalink}" target="_blank">Upvotes: ${post.score}</a>
         <a class="badge badge-pill badge-secondary" href="https://reddit.com${post.permalink}" target="_blank">Comments: ${post.num_comments}</a>
