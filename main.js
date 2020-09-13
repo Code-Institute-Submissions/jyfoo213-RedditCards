@@ -29,13 +29,12 @@ searchForm.addEventListener('submit', e => {
         ? post.preview.images[0].source.url
         : 'https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png';
       output += `
+      <a href="${post.url}" target="_blank">
       <div class="card mb-2">
       <img class="card-img-top" src="${image}" alt="Reddit Card Image">
       <div class="card-body">
         <h6 class="card-title">${truncateString(post.title, 100)}</h6>
         <p class="card-text">${truncateString(post.selftext, 100)}</p>
-        <a href="${post.url}" target="_blank
-        " class="btn btn-primary">Read More</a>
         <hr>
         <div class="mt-1 mb-1">
           <span class="badge badge-dark">Subreddit: ${post.subreddit}</span> 
@@ -44,6 +43,7 @@ searchForm.addEventListener('submit', e => {
         </div>
       </div>
     </div>
+    </a>
       `;
     });
     output += '</div>';
