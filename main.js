@@ -14,7 +14,7 @@ searchForm.addEventListener('submit', e => {
   // Check for input
   if (searchTerm == '') {
     // Show message
-    showMessage('Please add a search term', 'alert-danger');
+    showMessage('Please enter search input', 'alert-danger');
   }
   // Clear field
   searchInput.value = '';
@@ -37,9 +37,9 @@ searchForm.addEventListener('submit', e => {
         <a href="${post.url}" target="_blank
         " class="btn btn-primary">Read More</a>
         <hr>
-        <span class="badge badge-danger">subreddit: ${post.subreddit}</span> 
-        <span class="badge badge-warning">upvotes: ${post.score}</span>
-        <span class="badge badge-warning">comments: ${post.num_comments}</span>
+        <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br> 
+        <span class="badge badge-pill badge-secondary">Upvotes: ${post.score}</span>
+        <span class="badge badge-pill badge-secondary">Comments: ${post.num_comments}</span>
       </div>
     </div>
       `;
