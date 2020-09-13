@@ -29,16 +29,15 @@ searchForm.addEventListener('submit', e => {
         ? post.preview.images[0].source.url
         : 'https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png';
       output += `
-      <div class="card">
+      <div class="card border-dark">
       <h6 class="card-header bg-white">${truncateString(post.title, 200)}</h6>
       <img class="card-img-top" src="${image}" alt="Reddit Card Image">
       <div class="card-body">
-        <p class="card-text small">${truncateString(post.selftext, 200)}<a href="${post.url}" target="_blank"><b>[See More]</b></a>
+        <p class="card-text small">${truncateString(post.selftext, 200)}
+        <a href="https://reddit.com${post.permalink}" target="_blank"><b>View in Reddit</b></a>
       </div>
       <div class="card-footer bg-white">
-      <span class="badge badge-primary"><a href="https://reddit.com${post.permalink}" target="_blank"><b>Visit Original Post</b></a></span>
-      <span class="badge badge-dark">Subreddit: ${post.subreddit}</span>
-        <br>
+      <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br>
         <span class="badge badge-pill badge-secondary">Upvotes: ${post.score}</span>
         <span class="badge badge-pill badge-secondary">Comments: ${post.num_comments}</span>
       </div>
