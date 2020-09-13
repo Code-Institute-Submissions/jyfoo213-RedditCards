@@ -30,10 +30,10 @@ searchForm.addEventListener('submit', e => {
         : 'https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png';
       output += `
       <div class="card">
-      <h6 class="card-header bg-white">${truncateString(post.title, 180)}...<a href="${post.url}" target="_blank">see more</a></h6>
+      <h6 class="card-header bg-white">${truncateString(post.title, 200)}</h6>
       <img class="card-img-top" src="${image}" alt="Reddit Card Image">
       <div class="card-body">
-        <p class="card-text">${truncateString(post.selftext, 100)}</p>
+        <p class="card-text small">${truncateString(post.selftext, 200)}<a href="${post.url}" target="_blank"><b><u>[View in Reddit]</u></b></a>
       </div>
       <div class="card-footer bg-white">
         <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br>
