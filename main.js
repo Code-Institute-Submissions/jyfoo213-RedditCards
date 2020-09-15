@@ -4,6 +4,37 @@ const searchForm = document.getElementById('search-form');
 const searchBtn = document.getElementById('search-btn');
 const searchInput = document.getElementById('search-input');
 
+// keyword input
+// create an array of keyword strings
+const keyword = ["jokes", "memes", "funny"]
+// create a variable for the button that the user can click to use suggested keyword
+const keywordBtn;
+
+function createButtons(){
+// take strings in array and create buttons in HTML
+// use loop that auto generate and appends button for each string in array
+for (var i=0; i <keyword.length; i++) {
+  // create variable for button
+  var keywordBtn = $("<button>");
+  // add keyword to button
+  keywordBtn.text(keyword[i]);
+  // assign a data attribute to each button
+  keywordBtn.attr("data-name", keyword[i]);
+  // add a class of keyword-btn to each button as well as other classes to change the color, padding, and margin of the button.
+  keywordBtn.addClass("btn btn-primary p-2 mr-3 mb-2 keyword-btn");
+  // append each button to the keyword-btn-div in the HTML.
+  $("#keyword-btn-div").append(keywordBtn);
+}
+}
+}
+
+const keywordInput = document.getElementById('jokes');
+
+keywordInput.addEventListener, on click, populate the search box
+
+document.getElementById('search-input').innerHTML = output;
+
+
 searchForm.addEventListener('submit', e => {
   // get sort by:
   const sortBy = document.querySelector('input[name="sortby"]:checked').value;
@@ -14,7 +45,11 @@ searchForm.addEventListener('submit', e => {
   // check for search input
   if (searchTerm == '') {
   // Show message
-    showMessage('Please enter search input', 'alert-danger');
+    showMessage('Please enter search input', 'alert-warning');
+  }
+  else {
+    showMessage('');
+
   }
   // clear search field after user press submit
   searchInput.value = '';
