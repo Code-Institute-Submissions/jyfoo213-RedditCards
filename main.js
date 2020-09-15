@@ -8,25 +8,25 @@ const searchInput = document.getElementById('search-input');
 // create an array of keyword strings
 const keyword = ["jokes", "memes", "funny"]
 // create a variable for the button that the user can click to use suggested keyword
-const keywordBtn;
+// const keywordBtn;
 
-function createButtons(){
-// take strings in array and create buttons in HTML
-// use loop that auto generate and appends button for each string in array
-for (var i=0; i <keyword.length; i++) {
-  // create variable for button
-  var keywordBtn = $("<button>");
-  // add keyword to button
-  keywordBtn.text(keyword[i]);
-  // assign a data attribute to each button
-  keywordBtn.attr("data-name", keyword[i]);
-  // add a class of keyword-btn to each button as well as other classes to change the color, padding, and margin of the button.
-  keywordBtn.addClass("btn btn-primary p-2 mr-3 mb-2 keyword-btn");
-  // append each button to the keyword-btn-div in the HTML.
-  $("#keyword-btn-div").append(keywordBtn);
-}
-}
-}
+// function createButtons(){
+// // take strings in array and create buttons in HTML
+// // use loop that auto generate and appends button for each string in array
+// for (var i=0; i <keyword.length; i++) {
+//   // create variable for button
+//   var keywordBtn = $("<button>");
+//   // add keyword to button
+//   keywordBtn.text(topics[i]);
+//   //Assign a data attribute to each button.
+//   keywordBtn.attr("data-name", topics[i]);
+//   //Add a class of athlete-btn to each button as well as other classes to change the color, padding, and margin of the button.
+//   keywordBtn.addClass("btn btn-primary p-2 mr-3 mb-2 athlete-btn");
+//   //Append each button to the athlete-btn-div in the HTML.
+//   $("#athlete-btn-div").append(athleteBtn);
+// }
+// }
+// }
 
 const keywordInput = document.getElementById('jokes');
 
@@ -42,7 +42,10 @@ searchForm.addEventListener('submit', e => {
   const searchLimit = document.getElementById('limit').value;
   // get search input
   const searchTerm = searchInput.value;
-
+  // check for search input
+  if (searchTerm == '') {
+  // Show message
+    showMessage('Please enter search input', 'alert-danger');
   }
   // clear search field after user press submit
   searchInput.value = '';
@@ -82,21 +85,21 @@ searchForm.addEventListener('submit', e => {
   e.preventDefault();
 });
 
-// // Show Message Function
-// function showMessage(message, className) {
-//   // Create div
-//   const div = document.createElement('div');
-//   // Add classes
-//   div.className = `alert ${className}`;
-//   // Add text
-//   div.appendChild(document.createTextNode(message));
-//   // Get parent
-//   const searchContainer = document.getElementById('search-container');
-//   // Get form
-//   const search = document.getElementById('search');
+// Show Message Function
+function showMessage(message, className) {
+  // Create div
+  const div = document.createElement('div');
+  // Add classes
+  div.className = `alert ${className}`;
+  // Add text
+  div.appendChild(document.createTextNode(message));
+  // Get parent
+  const searchContainer = document.getElementById('search-container');
+  // Get form
+  const search = document.getElementById('search');
 
-//   // Insert alert
-//   searchContainer.insertBefore(div, search);
+  // Insert alert
+  searchContainer.insertBefore(div, search);
 
 }
 
