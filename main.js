@@ -28,11 +28,11 @@ const keyword = ["jokes", "memes", "funny"]
 // }
 // }
 
-const keywordInput = document.getElementById('jokes');
+// const keywordInput = document.getElementById('jokes');
 
-keywordInput.addEventListener, on click, populate the search box
+// keywordInput.addEventListener, on click, populate the search box
 
-document.getElementById('search-input').innerHTML = output;
+// document.getElementById('search-input').innerHTML = output;
 
 
 searchForm.addEventListener('submit', e => {
