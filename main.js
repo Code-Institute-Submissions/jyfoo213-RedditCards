@@ -42,13 +42,6 @@ searchForm.addEventListener('submit', e => {
   const searchLimit = document.getElementById('limit').value;
   // get search input
   const searchTerm = searchInput.value;
-  // check for search input
-  if (searchTerm == '') {
-  // Show message
-    showMessage('Please enter search input', 'alert-warning');
-  }
-  else {
-    showMessage('');
 
   }
   // clear search field after user press submit
@@ -89,21 +82,21 @@ searchForm.addEventListener('submit', e => {
   e.preventDefault();
 });
 
-// Show Message Function
-function showMessage(message, className) {
-  // Create div
-  const div = document.createElement('div');
-  // Add classes
-  div.className = `alert ${className}`;
-  // Add text
-  div.appendChild(document.createTextNode(message));
-  // Get parent
-  const searchContainer = document.getElementById('search-container');
-  // Get form
-  const search = document.getElementById('search');
+// // Show Message Function
+// function showMessage(message, className) {
+//   // Create div
+//   const div = document.createElement('div');
+//   // Add classes
+//   div.className = `alert ${className}`;
+//   // Add text
+//   div.appendChild(document.createTextNode(message));
+//   // Get parent
+//   const searchContainer = document.getElementById('search-container');
+//   // Get form
+//   const search = document.getElementById('search');
 
-  // Insert alert
-  searchContainer.insertBefore(div, search);
+//   // Insert alert
+//   searchContainer.insertBefore(div, search);
 
 }
 
