@@ -26,8 +26,11 @@
         <div class="mb-2">
           <h6>Popular Subreddits</h6>
           <button id="jokes" type="button" class="btn btn-outline-secondary btn-sm mb-1">Jokes</button>
-          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Funny</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Art</button>
           <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Memes</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Gaming</button>
+          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Food</button>
+          
         </div>
         
         <div class="form-check form-check-inline mb-1">
@@ -57,18 +60,33 @@
     <div id="results"></div>
 
 
-    <div class="card border-d ">
-      <h5 class="card-header bg-white text-dark pt-1 pb-1">Card title</h5>
-      <img class="card-img-top" src="https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png" alt="Card image cap">
-      <div class="card-body pt-2 pb-2">
-        <div class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <!-- <div class="card">
+      <h5 class="card-header bg-white" p-2>
+      <a class="text-dark" href="https://reddit.com${post.permalink}" target="_blank">${truncateString(post.title, 200)}</a></h5>
+      <img class="card-img-top" src="https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png" alt="Reddit Card Image">
+      <div class="card-body p-2">
+        <div class="card-text">${truncateString(post.selftext, 200)}
+        <a href="${(post.url)}" target="_blank"><small>${shortUrl(post.url,32)}</small></a>
+        </div>
       </div>
+      <div class="card-footer bg-white p-2">
+      <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br>
+        <a class="badge badge-pill badge-secondary" href="https://reddit.com${post.permalink}" target="_blank">Upvotes: ${post.score}</a>
+        <a class="badge badge-pill badge-secondary" href="https://reddit.com${post.permalink}" target="_blank">Comments: ${post.num_comments}</a>
+      </div> -->
     </div>
+    </a>
+
 
 
   </div>
-  <script src="./main.js" type="module"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
+    <script src="./main.js" type="module"></script>
 </body>
 
 </html>

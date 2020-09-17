@@ -57,16 +57,17 @@ searchForm.addEventListener('submit', e => {
     results.forEach(post => {
       // check if reddit post has image. if no image, display default image
       let image = post.preview
+        // ? post.media.reddit_video.fallback_url
         ? post.preview.images[0].source.url
         : 'https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png';
       output += `
       <div class="card">
       <h5 class="card-header bg-white" p-2>
       <a class="text-dark" href="https://reddit.com${post.permalink}" target="_blank">${truncateString(post.title, 200)}</a></h5>
-      <img class="card-img-top" src="${image}" alt="Reddit Card Image">
+      <img class="card-img-top" src="${image}" alt="Reddit media">
       <div class="card-body p-2">
         <div class="card-text">${truncateString(post.selftext, 200)}
-        <a href="${(post.url)}" target="_blank"><small>${shortUrl(post.url,32)}</small></a>
+        <a href="${(post.url)}" target="_blank"><small>${shortUrl(post.url,28)}</small></a>
         </div>
       </div>
       <div class="card-footer bg-white p-2">
