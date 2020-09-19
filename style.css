@@ -7,6 +7,13 @@ body {
   background-color: #f5f5f5;
 }
 
+.alert {
+  font-size: 95%;
+  font-style: oblique;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+
 /* .badge{
   margin: 1px;
 } */

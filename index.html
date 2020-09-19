@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f2341f8-fcf0-4158-be94-5c3a374e71e7/d8w5gj3-b933c9f2-7ded-461d-8e05-c8425fd4090b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNWYyMzQxZjgtZmNmMC00MTU4LWJlOTQtNWMzYTM3NGU3MWU3XC9kOHc1Z2ozLWI5MzNjOWYyLTdkZWQtNDYxZC04ZTA1LWM4NDI1ZmQ0MDkwYi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.qnsooyFohagM2AARf4mcEsy4iyw750rjtyUgO_YoOk4" type="image" sizes="16x16">
   <title>Reddit Cards</title>
@@ -19,34 +24,75 @@
     <div id="search" class="card card-body bg-white mb-2 ">
       <h5>Search Reddit</h5>
       <form id="search-form">
-        <div class="form-group">
-          <input type="text" id="search-input" class="form-control mb-3" placeholder="Search Input" required>
+        
+        <div class="form-group d-flex align-items-center flex-nowrap">
+          <input type="text" name="search" id="search-input" class="form-control mr-1" placeholder="Search Input">
+          <button id="btn" class="btn btn-outline-secondary border" type="submit">
+            <i class="fa fa-search"></i>
+        </button>
         </div>
+
         <!-- keywords -->
-        <div class="mb-2">
+        <div class="mb-2" id="recommendations">
           <h6>Popular Subreddits</h6>
-          <button id="jokes" type="button" class="btn btn-outline-secondary btn-sm mb-1">Jokes</button>
-          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Art</button>
-          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Memes</button>
-          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Gaming</button>
-          <button type="button" class="btn btn-outline-secondary btn-sm mb-1">Food</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">News</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Technology</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Gadgets</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">DIY</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Art</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Science</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Gifs</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Videos</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Funny</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Memes</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Sports</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Politics</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Pics</button>
+          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Aww</button>
           
         </div>
-        
-        <div class="form-check form-check-inline mb-1">
-          Sort By:
-          <input class="form-check-input ml-2" type="radio" name="sortby" value="relevance" checked>
+
+        Sort By: 
+        <div class="form-check form-check-inline">          
+          <input class="form-check-input ml-2" type="radio" type="submit" name="sortby" value="relevance" checked>
           <label class="form-check-label">
             Relevance
           </label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="sortby" value="new">
+          <input class="form-check-input" type="radio" type="submit" name="sortby" value="hot" checked>
+          <label class="form-check-label">
+            Trending
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" type="submit" name="sortby" value="new" checked>
           <label class="form-check-label">
             Latest
           </label>
         </div>
-        <h6 class="mt-2">Results Per Page</h6>
+
+        <!-- <div class="form-check form-check-inline mb-1">
+          Results:              
+          <input class="form-check-input ml-2" type="radio" name="sortby" value="relevance" checked>
+          <label class="form-check-label">
+           10
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sortby" value="new">
+          <label class="form-check-label">
+            50
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sortby" value="new">
+          <label class="form-check-label">
+            100
+          </label>
+        </div> -->
+
+        <!-- <h6 class="mt-2">Results Per Page</h6>
         <div class="form-group">
           <select name="limit" id="limit" class="form-control">
             <option value="10">10</option>
@@ -54,39 +100,21 @@
             <option value="100">100</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-dark btn-block mt-4">Search</button>
-      </form>
-    </div>
+      </form>-->
+   
+    </div> 
+    <div id="summary"></div>
     <div id="results"></div>
-
-
-    <!-- <div class="card">
-      <h5 class="card-header bg-white" p-2>
-      <a class="text-dark" href="https://reddit.com${post.permalink}" target="_blank">${truncateString(post.title, 200)}</a></h5>
-      <img class="card-img-top" src="https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png" alt="Reddit Card Image">
-      <div class="card-body p-2">
-        <div class="card-text">${truncateString(post.selftext, 200)}
-        <a href="${(post.url)}" target="_blank"><small>${shortUrl(post.url,32)}</small></a>
-        </div>
-      </div>
-      <div class="card-footer bg-white p-2">
-      <span class="badge badge-dark">Subreddit: ${post.subreddit}</span><br>
-        <a class="badge badge-pill badge-secondary" href="https://reddit.com${post.permalink}" target="_blank">Upvotes: ${post.score}</a>
-        <a class="badge badge-pill badge-secondary" href="https://reddit.com${post.permalink}" target="_blank">Comments: ${post.num_comments}</a>
-      </div> -->
     </div>
     </a>
-
-
-
   </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  
     <script src="./main.js" type="module"></script>
+
 </body>
 
 </html>

@@ -1,57 +1,37 @@
-import reddit from './redditapi.js';
+// search reddit API function
+function search(searchTerm, sortBy) {
+  return fetch(
+    `https://www.reddit.com/search.json?q=${searchTerm}&sort=${sortBy}&limit=100`
+  )
+    .then(res => res.json())
+    .then(data => {
+      return data.data.children.map(data => data.data);
+    })
+    .catch(err => console.log(err));
+}
 
+// inputs from search input and button
 const searchForm = document.getElementById('search-form');
-const searchBtn = document.getElementById('search-btn');
 const searchInput = document.getElementById('search-input');
-
-// keyword input
-// create an array of keyword strings
-const keyword = ["jokes", "memes", "funny"]
-// create a variable for the button that the user can click to use suggested keyword
-// const keywordBtn;
-
-// function createButtons(){
-// // take strings in array and create buttons in HTML
-// // use loop that auto generate and appends button for each string in array
-// for (var i=0; i <keyword.length; i++) {
-//   // create variable for button
-//   var keywordBtn = $("<button>");
-//   // add keyword to button
-//   keywordBtn.text(topics[i]);
-//   //Assign a data attribute to each button.
-//   keywordBtn.attr("data-name", topics[i]);
-//   //Add a class of athlete-btn to each button as well as other classes to change the color, padding, and margin of the button.
-//   keywordBtn.addClass("btn btn-primary p-2 mr-3 mb-2 athlete-btn");
-//   //Append each button to the athlete-btn-div in the HTML.
-//   $("#athlete-btn-div").append(athleteBtn);
-// }
-// }
-// }
-
-// const keywordInput = document.getElementById('jokes');
-
-// keywordInput.addEventListener, on click, populate the search box
-
-// document.getElementById('search-input').innerHTML = output;
-
 
 searchForm.addEventListener('submit', e => {
   // get sort by:
   const sortBy = document.querySelector('input[name="sortby"]:checked').value;
-  // get results per page
-  const searchLimit = document.getElementById('limit').value;
+  // // get results per page
+  // const searchLimit = document.getElementById('limit').value;
   // get search input
   const searchTerm = searchInput.value;
   // check for search input
   if (searchTerm == '') {
-  // Show message
-    showMessage('Please enter search input', 'alert-danger');
-  }
-  // clear search field after user press submit
-  searchInput.value = '';
+  // Error Message
+    errorMessage('Please enter search input', 'alert-info');
+  }  
+  // // clear search field after user press submit
+  // searchInput.value = '';
 
   // search reddit; pass following parameters to reddit API
-  reddit.search(searchTerm, searchLimit, sortBy).then(results => {
+  search(searchTerm, sortBy)
+  .then(results => {
     let output = '<div class="card-columns">';
     console.log(results);
     results.forEach(post => {
@@ -86,8 +66,8 @@ searchForm.addEventListener('submit', e => {
   e.preventDefault();
 });
 
-// Show Message Function
-function showMessage(message, className) {
+// Error Message Function
+function errorMessage(message, className) {
   // Create div
   const div = document.createElement('div');
   // Add classes
@@ -95,23 +75,37 @@ function showMessage(message, className) {
   // Add text
   div.appendChild(document.createTextNode(message));
   // Get parent
-  const searchContainer = document.getElementById('search-container');
-  // Get form
-  const search = document.getElementById('search');
+  const searchForm= document.getElementById('search-form');
+  // Get recommendations
+  const recommendations = document.getElementById('recommendations');
 
-  // Insert alert
-  searchContainer.insertBefore(div, search);
-
+  // Insert alert into parent element, before recommendations
+  searchForm.insertBefore(div, recommendations);
 }
 
-// Truncate String Function
+// Hide Error Message On Any Click
+document.addEventListener('click',function(){
+  $('.alert').hide();
+})
+
+//Auto-fill form and trigger search with popular recommendation
+$('.recc').on('click',function(){
+  $('input[name="search"]').val($(this).text());
+})
+
+// Trigger search when radio buttons are clicked
+$('input[name=sortby]').click(function(){
+  document.getElementById("btn").click();
+});
+
+// Truncate String Function 
 function truncateString(myString, limit) {
   const shortened = myString.indexOf(' ', limit);
   if (shortened == -1) return myString;
   return myString.substring(0, shortened);
 }
 
-//Truncate URL Function
+//Truncate URL Function https://stackoverflow.com/questions/1301512/truncate-a-string-straight-javascript
 function shortUrl(url, l){
   var l = typeof(l) != "undefined" ? l : 50;
   var chunk_l = (l/2);
