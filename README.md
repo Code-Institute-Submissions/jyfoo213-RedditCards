@@ -73,6 +73,7 @@ By: **Foo Jiun Yang**
 ## 4. Credits
 
 - [Reddit API](https://www.reddit.com/dev/api/)
+- [Integration of Reddit API with reference from TraversyMedia's Tutorial](https://www.traversymedia.com/)
 - [Favicon credits](https://www.deviantart.com/sandiskplayer34/art/Reddit-App-Icon-537731823)
 - [Default image used loaded when API does not have preview image](https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png)
 - [Truncate function](https://stackoverflow.com/questions/1301512/truncate-a-string-straight-javascript)
