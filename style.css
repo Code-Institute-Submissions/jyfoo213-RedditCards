@@ -14,6 +14,12 @@ body {
   margin-bottom: 12px;
 }
 
-/* .badge{
-  margin: 1px;
-} */
+#size-break {
+  display: none;
+}
+
+@media only screen and (max-width: 401px) {
+  #size-break {
+    display: block;
+  }
+}
