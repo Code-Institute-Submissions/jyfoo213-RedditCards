@@ -10,8 +10,7 @@ By: **Foo Jiun Yang**
 - Users may visit the actual Reddit Posts via the Cards if they like through hyperlinks
 - Live site: https://jyfoo213.github.io/RedditCards/
 - Screenshot:
-
-![Reddit Card Demo Image](assets/RedditCardsDemo.png)
+![Demo](assets/Demo.png)
 
 ## 2. Planning and Design
 
@@ -22,6 +21,8 @@ By: **Foo Jiun Yang**
 - The API allows unlimited search entries, and is also able to provide real-time, Live information from Reddit's database
 
 #### 2.2 Theme, Design, UI/UX
+
+![Search Bar](assets/SearchBar.png)
 
 - The website features neutral colors, so users are able to focus their attention on the content generated from the Reddit Posts
 - Website also features a clean user interface. There is only 1 search bar to prompt for input. And if users can't think of any inputs, a wide range of recommended search topics are available for users to explore to further enhance user experience
@@ -60,6 +61,7 @@ By: **Foo Jiun Yang**
 - **Search Results in Generated Cards**: Check search result generates (1) title, (2) image, (3) Url link of post, (4) subreddit category, (5) no. of upvotes, (6) no. of comments. Also ensure that 100 cards are generated per serach query.
 - **External Links Generated in Cards**: Check that the card title, upvotes, comment button can be linked to the original Reddit post. Check that the Url link of the post can be accessed as well.
 - **Responsiveness**: View website to ensure it was responsive across all screen sizes, displaying consistent user interface and experience
+![Responsive](assets/Responsive.png)
 
 #### 3.4. Deployment
 
