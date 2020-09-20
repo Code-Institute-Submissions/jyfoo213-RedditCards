@@ -3,28 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jquery -->
   <script
   src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
   crossorigin="anonymous"></script>
+  <!-- bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <!-- font awesome -->
   <link rel="icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f2341f8-fcf0-4158-be94-5c3a374e71e7/d8w5gj3-b933c9f2-7ded-461d-8e05-c8425fd4090b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNWYyMzQxZjgtZmNmMC00MTU4LWJlOTQtNWMzYTM3NGU3MWU3XC9kOHc1Z2ozLWI5MzNjOWYyLTdkZWQtNDYxZC04ZTA1LWM4NDI1ZmQ0MDkwYi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.qnsooyFohagM2AARf4mcEsy4iyw750rjtyUgO_YoOk4" type="image" sizes="16x16">
+  <link rel="stylesheet" href="style.css">
   <title>Reddit Cards</title>
 </head>
 
 <body>
+  <!-- navbar -->
   <nav class="navbar navbar-dark bg-dark mb-3">
     <div class="container">
       <span class="navbar-brand"><h1>Reddit Cards</h1></span>
     </div>
   </nav>
+  
+  <!-- search bar -->
   <div id="search-container" class="container">
     <div id="search" class="card card-body bg-white mb-2 ">
-      <h5>Search Reddit</h5>
+      <h2>Search Reddit</h2>
       <form id="search-form">
-        
         <div class="form-group d-flex align-items-center flex-nowrap">
           <input type="text" name="search" id="search-input" class="form-control mr-1" placeholder="Search Input">
           <button id="btn" class="btn btn-outline-secondary border" type="submit">
@@ -32,28 +37,28 @@
         </button>
         </div>
 
-        <!-- keywords -->
+        <!-- popular topics -->
         <div class="mb-2" id="recommendations">
-          <h6>Popoular Topics</h6>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">World News</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Politics</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Stocks</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Sports</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Technology</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Funny</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Memes</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Gifs</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Videos</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Pics</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Art</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">DIY</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">TV</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Movies</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Covid</button>
-          <button type="submit" class="recc btn btn-outline-secondary btn-sm mb-1">Singapore</button>
-          
+          <h3>Popoular Topics</h3>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">World News</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Politics</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Stocks</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Sports</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Technology</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Funny</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Memes</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Gifs</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Videos</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Pics</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Art</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">DIY</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">TV</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Movies</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Covid</button>
+          <button class="recc btn btn-outline-secondary btn-sm mb-1">Singapore</button>
         </div>
 
+        <!-- sort section -->
         Sort By:
         <br id="size-break">
         <div class="form-check form-check-inline mr-1">          
@@ -74,23 +79,16 @@
             Comments
           </label>
         </div>
-
-        <!-- <h6 class="mt-2">Results Per Page</h6>
-        <div class="form-group">
-          <select name="limit" id="limit" class="form-control">
-            <option value="10">10</option>
-            <option value="50" selected>50</option>
-            <option value="100">100</option>
-          </select>
-        </div>
-      </form>-->
    
     </div> 
-    <div id="summary"></div>
     <div id="results"></div>
+     <!-- footer -->
+     <hr class="shadow-sm">
+     <div id="footer">
+         &copy; RedditCards by Jiun Yang
+     </div>
+  <!-- end of container -->
     </div>
-    </a>
-  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -98,7 +96,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="./main.js" type="module"></script>
-
 </body>
-
 </html>

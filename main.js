@@ -10,26 +10,22 @@ function search(searchTerm, sortBy) {
     .catch(err => console.log(err));
 }
 
-// inputs from search input and button
+// retrieve inputs from search field and button
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 
 searchForm.addEventListener('submit', e => {
-  // get sort by:
+  // get sort by
   const sortBy = document.querySelector('input[name="sortby"]:checked').value;
-  // // get results per page
-  // const searchLimit = document.getElementById('limit').value;
   // get search input
   const searchTerm = searchInput.value;
-  // check for search input
+  // check if search input is blank
   if (searchTerm == '') {
-  // Error Message
+  // trigger error message
     errorMessage('Please enter search input', 'alert-info');
   }  
-  // // clear search field after user press submit
-  // searchInput.value = '';
 
-  // search reddit; pass following parameters to reddit API
+  // excute search; pass following parameters to reddit API
   search(searchTerm, sortBy)
   .then(results => {
     let output = '<div class="card-columns">';
@@ -43,11 +39,11 @@ searchForm.addEventListener('submit', e => {
       output += `
       <div class="card">
       <h5 class="card-header bg-white" p-2>
-      <a class="text-dark" href="https://reddit.com${post.permalink}" target="_blank">${truncateString(post.title, 200)}</a></h5>
+      <a class="text-dark" href="https://reddit.com${post.permalink}" target="_blank">${truncateString(post.title, 180)}</a></h5>
       <img class="card-img-top" src="${image}" alt="Reddit media">
       <div class="card-body p-2">
-        <div class="card-text">${truncateString(post.selftext, 200)}
-        <a href="${(post.url)}" target="_blank"><small>${shortUrl(post.url,28)}</small></a>
+        <div class="card-text">${truncateString(post.selftext, 140)}
+        <a href="${(post.url)}" target="_blank"><small>Link: ${shortUrl(post.url,26)}</small></a>
         </div>
       </div>
       <div class="card-footer bg-white p-2">
@@ -62,50 +58,49 @@ searchForm.addEventListener('submit', e => {
     output += '</div>';
     document.getElementById('results').innerHTML = output;
   });
-
   e.preventDefault();
 });
 
-// Error Message Function
+// error message function
 function errorMessage(message, className) {
-  // Create div
+  // create div
   const div = document.createElement('div');
-  // Add classes
+  // add classes
   div.className = `alert ${className}`;
-  // Add text
+  // add text
   div.appendChild(document.createTextNode(message));
-  // Get parent
+  // get parent
   const searchForm= document.getElementById('search-form');
-  // Get recommendations
+  // get recommendations
   const recommendations = document.getElementById('recommendations');
-
-  // Insert alert into parent element, before recommendations
+  // insert alert into parent element, before recommendations
   searchForm.insertBefore(div, recommendations);
 }
 
-// Hide Error Message On Any Click
+// hide error message on any click
 document.addEventListener('click',function(){
   $('.alert').hide();
 })
 
-//Auto-fill form and trigger search with popular recommendation
+//auto-fill form and trigger search with popular recommendation
 $('.recc').on('click',function(){
   $('input[name="search"]').val($(this).text());
+  document.getElementById("btn").click();
 })
 
-// Trigger search when radio buttons are clicked
+//trigger search when radio buttons are clicked
 $('input[name=sortby]').click(function(){
   document.getElementById("btn").click();
 });
 
-// Truncate String Function 
+//truncate string function 
 function truncateString(myString, limit) {
   const shortened = myString.indexOf(' ', limit);
   if (shortened == -1) return myString;
   return myString.substring(0, shortened);
 }
 
-//Truncate URL Function https://stackoverflow.com/questions/1301512/truncate-a-string-straight-javascript
+//truncate url function https://stackoverflow.com/questions/1301512/truncate-a-string-straight-javascript
 function shortUrl(url, l){
   var l = typeof(l) != "undefined" ? l : 50;
   var chunk_l = (l/2);
