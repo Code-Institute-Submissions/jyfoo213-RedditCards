@@ -50,8 +50,9 @@ By: **Foo Jiun Yang**
 - Ensure user experience and display is consistent across multiple browsers and screen sizes
 - Test all interactive features
 - Platforms tested: PC (Chrome and Safari), iPhone8 (Safari), and Google Pixel 4 (Chrome)
+![Responsive](assets/Responsive.png)
 
-#### 3.3 Testing Of Interactive Features
+#### 3.3 Testing Of All Interactive Features
 
 - **Search Bar**: Enter any keyword into search bar, click enter or search icon and ensure that a return result is generated and appended into card containers
 - **Error Message**: Enter a null response in the search bar, and ensure that an error message is triggered. Click anywhere on the screen to ensure error message is dismissed.
@@ -61,20 +62,20 @@ By: **Foo Jiun Yang**
 - **Search Results in Generated Cards**: Check search result generates (1) title, (2) image, (3) Url link of post, (4) subreddit category, (5) no. of upvotes, (6) no. of comments. Also ensure that 100 cards are generated per serach query.
 - **External Links Generated in Cards**: Check that the card title, upvotes, comment button can be linked to the original Reddit post. Check that the Url link of the post can be accessed as well.
 - **Responsiveness**: View website to ensure it was responsive across all screen sizes, displaying consistent user interface and experience
-![Responsive](assets/Responsive.png)
 
 #### 3.4. Deployment
 
 - Project was built on Visual Studio Code and Visual Studio Code Live Server
 - Project was committed, staged, and pushed to GitHub
+- Code validation was checked with W3C Developer Tools to ensure no errors
 
 ## 4. Credits
 
-- Favicon credits: https://www.deviantart.com/sandiskplayer34/art/Reddit-App-Icon-537731823
-- Image loaded when no preview results:
-  https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png
 - [Reddit API](https://www.reddit.com/dev/api/)
-- Truncate function:
-  https://stackoverflow.com/questions/1301512/truncate-a-string-straight-javascript
-- Responsive Test:
-  http://ami.responsivedesign.is/#
+- [Favicon credits](https://www.deviantart.com/sandiskplayer34/art/Reddit-App-Icon-537731823)
+- [Default image used loaded when API does not have preview image](
+  https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png)
+- [Truncate function](
+  https://stackoverflow.com/questions/1301512/truncate-a-string-straight-javascript)
+- [Responsive Test](
+  http://ami.responsivedesign.is/#)
