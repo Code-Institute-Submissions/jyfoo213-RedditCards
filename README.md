@@ -10,7 +10,7 @@ By: **Foo Jiun Yang**
 - Users may visit the actual Reddit Posts via the Cards if they like through hyperlinks
 - Live site: https://jyfoo213.github.io/RedditCards/
 - Screenshot:
-![Demo](assets/Demo.png)
+  ![Demo](assets/Demo.png)
 
 ## 2. Planning and Design
 
@@ -50,7 +50,7 @@ By: **Foo Jiun Yang**
 - Ensure user experience and display is consistent across multiple browsers and screen sizes
 - Test all interactive features
 - Platforms tested: PC (Chrome and Safari), iPhone8 (Safari), and Google Pixel 4 (Chrome)
-![Responsive](assets/Responsive.png)
+  ![Responsive](assets/Responsive.png)
 
 #### 3.3 Testing Of All Interactive Features
 
@@ -67,15 +67,13 @@ By: **Foo Jiun Yang**
 
 - Project was built on Visual Studio Code and Visual Studio Code Live Server
 - Project was committed, staged, and pushed to GitHub
-- Code validation was checked with W3C Developer Tools to ensure no errors
+- Code validation was checked with W3C Jigsaw Validator to ensure no errors
+  ![Validator](assets/Validator.png)
 
 ## 4. Credits
 
 - [Reddit API](https://www.reddit.com/dev/api/)
 - [Favicon credits](https://www.deviantart.com/sandiskplayer34/art/Reddit-App-Icon-537731823)
-- [Default image used loaded when API does not have preview image](
-  https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png)
-- [Truncate function](
-  https://stackoverflow.com/questions/1301512/truncate-a-string-straight-javascript)
-- [Responsive Test](
-  http://ami.responsivedesign.is/#)
+- [Default image used loaded when API does not have preview image](https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png)
+- [Truncate function](https://stackoverflow.com/questions/1301512/truncate-a-string-straight-javascript)
+- [Responsive Test](http://ami.responsivedesign.is/#)
