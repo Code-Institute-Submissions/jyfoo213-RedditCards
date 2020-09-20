@@ -1,4 +1,4 @@
-// search reddit API function
+// search reddit API function with reference from TraversyMedia
 function search(searchTerm, sortBy) {
   return fetch(
     `https://www.reddit.com/search.json?q=${searchTerm}&sort=${sortBy}&limit=100`
