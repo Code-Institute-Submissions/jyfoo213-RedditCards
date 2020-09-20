@@ -47,8 +47,6 @@
           <button class="recc btn btn-outline-secondary btn-sm mb-1">Technology</button>
           <button class="recc btn btn-outline-secondary btn-sm mb-1">Funny</button>
           <button class="recc btn btn-outline-secondary btn-sm mb-1">Memes</button>
-          <button class="recc btn btn-outline-secondary btn-sm mb-1">Gifs</button>
-          <button class="recc btn btn-outline-secondary btn-sm mb-1">Videos</button>
           <button class="recc btn btn-outline-secondary btn-sm mb-1">Pics</button>
           <button class="recc btn btn-outline-secondary btn-sm mb-1">Art</button>
           <button class="recc btn btn-outline-secondary btn-sm mb-1">DIY</button>
@@ -79,13 +77,45 @@
             Comments
           </label>
         </div>
-   
-    </div> 
-    <div id="results"></div>
+   </div>
+  
+   <div class="accordion" id="accordionExample">
+    <div class="card">
+      <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="text-decoration: none">
+      <div class="card-header border-bottom-0 bg-white" id="headingOne">
+        <div class="mb-0">
+            <h4>About &nbsp;<i class="fa fa-caret-down"></i></h4>
+          </div>
+      </div>
+    </button>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body border-top">
+            <h3>Objective</h3>
+            <ul>
+            <li>Reddit Cards lets you search and view the summary of up to 100 Reddit posts in card containers</li>
+            <li>It is built with the Reddit API, and is optimised for mobile and desktop</li>
+            </ul>
+            <h3>Quick Guide</h3>
+            <ol>
+              <li>Search by keyword(s) above, or select from the suggested “Popular Topics”</li>
+              <li>Sort your results:
+                <ul>
+                <li><b>Relevance</b>  - results ranked by Reddit’s search algorithm</li>
+                <li><b>Top</b> - results ranked by highest upvotes</li>
+                <li><b>Comments</b> - results ranked by highest comment count</li>
+              </ul>
+              <li>After results are generated, you may click card title if you like to read the full post on Reddit!</li>
+            </ol>
+        </div>
+      </div>
+    </div>
+    <div class="mb-2"></div>
+
+  <div id="results"></div>
      <!-- footer -->
      <hr class="shadow-sm">
      <div id="footer">
-         &copy; RedditCards by Jiun Yang
+         &copy; RedditCards by Jiun Yang // 2020
      </div>
   <!-- end of container -->
     </div>

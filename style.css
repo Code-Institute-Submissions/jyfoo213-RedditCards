@@ -1,21 +1,35 @@
-h1{
+h1 {
   font-size: 125%;
   margin: auto;
 }
 
-h2{
+h2 {
   font-size: 115%;
 }
 
-h3{
+h3 {
   font-size: 110%;
 }
 
-h5{
+h4 {
+  margin: 0px;
+  font-size: 110%;
+  text-align: left;
+}
+
+h5 {
   font-size: 105%;
   font-weight: 500;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.panel-heading {
+  cursor: pointer;
+}
+
+b {
+  font-weight: 600;
 }
 
 body {
@@ -33,11 +47,11 @@ body {
   margin-bottom: 12px;
 }
 
-#footer{
+#footer {
   font-size: 80%;
-  margin-bottom:10px;
-  width:100%;
-  text-align:right;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: right;
 }
 
 #size-break {
