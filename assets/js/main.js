@@ -28,13 +28,13 @@ searchForm.addEventListener("submit", (e) => {
   // excute search; pass following parameters to reddit API
   search(searchTerm, sortBy).then((results) => {
     let output = '<div class="card-columns">';
-    console.log(results);
+    // console.log(results);
     results.forEach((post) => {
       // check if reddit post has image. if no image, display default image
       let image = post.preview
         ? // ? post.media.reddit_video.fallback_url
           post.preview.images[0].source.url
-        : "https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png";
+        : "assets/images/reddit_placeholder_image.png";
       output += `
       <div class="card">
       <h5 class="card-header bg-white" p-2>

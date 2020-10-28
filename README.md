@@ -10,7 +10,7 @@ By: **Foo Jiun Yang**
 - Users may visit the actual Reddit Posts via the Cards if they like through hyperlinks
 - Live site: https://jyfoo213.github.io/RedditCards/
 - Screenshot:
-  ![Demo](assets/Demo.png)
+  ![Demo](assets/images/Demo.png)
 
 ## 2. Planning and Design
 
@@ -22,7 +22,7 @@ By: **Foo Jiun Yang**
 
 #### 2.2 Theme, Design, UI/UX
 
-![Search Bar](assets/SearchBar.png)
+![Search Bar](assets/images/SearchBar.png)
 
 - The website features neutral colors, so users are able to focus their attention on the content generated from the Reddit Posts
 - Website also features a clean user interface. There is only 1 search bar to prompt for input. And if users can't think of any inputs, a wide range of recommended search topics are available for users to explore to further enhance user experience
@@ -50,7 +50,7 @@ By: **Foo Jiun Yang**
 - Ensure user experience and display is consistent across multiple browsers and screen sizes
 - Test all interactive features
 - Platforms tested: PC (Chrome and Safari), iPhone8 (Safari), and Google Pixel 4 (Chrome)
-  ![Responsive](assets/Responsive.png)
+  ![Responsive](assets/images/Responsive.png)
 
 #### 3.3 Testing Of All Interactive Features
 
@@ -68,7 +68,7 @@ By: **Foo Jiun Yang**
 - Project was built on Visual Studio Code and Visual Studio Code Live Server
 - Project was committed, staged, and pushed to GitHub
 - Code validation was checked with W3C Jigsaw Validator to ensure no errors
-  ![Validator](assets/Validator.png)
+  ![Validator](assets/images/Validator.png)
 
 ## 4. Credits
 
