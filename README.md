@@ -98,6 +98,6 @@ By: **Foo Jiun Yang**
 - [Reddit API](https://www.reddit.com/dev/api/)
 - [Integration of Reddit API with reference from TraversyMedia's Tutorial](https://www.traversymedia.com/)
 - [Favicon credits](https://www.deviantart.com/sandiskplayer34/art/Reddit-App-Icon-537731823)
-- [Default image used loaded when API does not have preview image](https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png)
+- [Placeholder image used loaded when API does not have preview image](assets/images/reddit_placeholder_image.png)- Taken from Reddit official site
 - [Truncate function](https://stackoverflow.com/questions/1301512/truncate-a-string-straight-javascript)
 - [Responsive Test](http://ami.responsivedesign.is/#)
