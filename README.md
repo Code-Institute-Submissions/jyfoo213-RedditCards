@@ -34,7 +34,7 @@ By: **Foo Jiun Yang**
 - **Error message**: if there are no search inputs, an error message will be triggered to prompt users for an input. The error message will be dismissed when the user clicks elsewhere on the page
 - **Collapsible "About" section**: The "About" section serves as a quick guide for users, and can be collapsed once the user has read its information, so the user can focus on the rest of the content the website has to offer
 - **Responsive keywords and sort filters**: recommneded keywords are provided for users, which will generate a search result once clicked. The result will also appear in the search bar so users remember the keyword they have selected. Sort filters are also responsive, which generates the resultant search result upon clicking. These features allow a seamless UX for users when they are adjusting their search results
-- **Image preview**: Images are loaded onto the cards from the Reddit API. If there are no images for preview, a [placeholder image](https://redditupvoted.files.wordpress.com/2019/10/dxfmwbkq.png) is shown instead. This ensures consistency in the card formatting and UI for users
+- **Image preview**: Images are loaded onto the cards from the Reddit API. If there are no images for preview, a [placeholder image](assets/images/reddit_placeholder_image.png) is shown instead. This ensures consistency in the card formatting and UI for users
 - **String truncation**: As post titles or Urls loaded from the Reddit API can be lengthy, a string truncation function was used to shorten the display, to keep the UI clean and information relevant for users.
 
 ## 3. Implementation
@@ -49,7 +49,7 @@ By: **Foo Jiun Yang**
 
 - Ensure user experience and display is consistent across multiple browsers and screen sizes
 - Test all interactive features
-- Platforms tested: PC (Chrome and Safari), iPhone8 (Safari), and Google Pixel 4 (Chrome)
+- Platforms tested: PC (Chrome, Safari, Firefox), iPhone8 (Safari), and Google Pixel 4 (Chrome)
   ![Responsive](assets/images/Responsive.png)
 
 #### 3.3 Testing Of All Interactive Features
@@ -63,12 +63,35 @@ By: **Foo Jiun Yang**
 - **External Links Generated in Cards**: Check that the card title, upvotes, comment button can be linked to the original Reddit post. Check that the Url link of the post can be accessed as well.
 - **Responsiveness**: View website to ensure it was responsive across all screen sizes, displaying consistent user interface and experience
 
-#### 3.4. Deployment
+#### 3.4. Code Validation
 
-- Project was built on Visual Studio Code and Visual Studio Code Live Server
-- Project was committed, staged, and pushed to GitHub
 - Code validation was checked with W3C Jigsaw Validator to ensure no errors
   ![Validator](assets/images/Validator.png)
+
+#### 3.5. Deployment
+
+- Project was built on Visual Studio Code and Visual Studio Code Live Server
+- Project was committed, staged, and pushed to GitHub. 
+- Specifically, a Github repository https://github.com/jyfoo213/RedditCards was created, before the master branch of the website is deployed and saved to the Github pages. 
+- All  assets, i.e. images, javascript, css are in their respective folders, the main site named index.html and the README file in the root folder.
+
+#### 3.6. Running My Code
+
+- You may either use the fork function on github or clone/download button to duplicate the files in my master branch. For cloning, type git clone https://github.com/jyfoo213/RedditCards.git in your system's command prompt.
+- You may use a code editor/IDE such as Visual Studio Code or Gitpod to open the folder and preview the website by running the code. 
+- If you are viewing my website in an IDE offline, you may experience **CORS Issue.** Please see section below for more information.
+
+#### 3.7 Potential CORS Issue & Troubleshooting
+
+- **PLEASE NOTE** that if you are previewing my website in an IDE offline environment, you may encounter CORS issue. 
+- There are 2 ways to resolve it:
+  1. Install Live Server in your IDE. If you are using VS Code, you may install Live Server as an extension. Thereafter, preview my website in Live Server.
+  2. View the website from my Github Live site directly: https://jyfoo213.github.io/RedditCards/
+- **There will be no CORS issue as long as the website is viewed in LIVE environment based on the 2 options above provided**
+- To understand more, CORS stands for Cross-Origin Resource Sharing. CORS is a security mechanism built into modern web-browsers. It basically blocks all the http requests from your front end to any API that is not in the same “Origin” (domain, protocol, and port—which is the case most of the time). 
+- Hence to prevent this issue, it is **necessary to preview my website in Live environment**, so the http request to the API does not call from the same "Origin".  
+- Explanation credits to this [website](https://blog.container-solutions.com/a-guide-to-solving-those-mystifying-cors-issues#:~:text=Simple%20as%20that.,allowed%20to%20do%20that%20call'.&text=In%20order%20to%20fix%20CORS,Access%2DControl%2DAllow%2D*), or to understand further, you may read this [Article](https://medium.com/netscape/hacking-it-out-when-cors-wont-let-you-be-great-35f6206cc646) or this [Reddit Thread](https://www.reddit.com/r/programming/comments/cby4vo/developers_dont_understand_cors/) as well.
+
 
 ## 4. Credits
 
